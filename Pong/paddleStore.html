@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Store </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+ sjs.open();
+ var store_text = new sjs.Text("Store",28,"blue");
+ store_text.centerH();
+
+ //buttons
+ var ballsBtn = new sjs.Button("Balls", function(){
+ window.location = "ballStore.html";
+ });
+
+ var paddlesBtn = new sjs.Button("Paddles", function(){
+ window.location = "paddleStore.html";
+ });
+
+ var menuBtn = new sjs.Button("Menu", function(){
+ window.location = "Menu.html";
+ });
+
+ ballsBtn.moveTo(160,50);
+ paddlesBtn.moveTo(260,50);
+ menuBtn.right();
+
+ var coins_txt = new sjs.Text("Coins: 0", 21, "Orange");
+} //end start
+</script>
+
+</head>
+<body onload="start()">
+<h1> Menu </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
